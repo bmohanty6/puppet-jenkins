@@ -1,5 +1,5 @@
 name    'rtyler-jenkins'
-version '1.1.1'
+version '1.1.2'
 source 'git://github.com/jenkinsci/puppet-jenkins.git'
 author 'R. Tyler Croy <tyler@monkeypox.org>'
 license 'Apache 2.0'
