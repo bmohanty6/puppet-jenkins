@@ -140,8 +140,6 @@ class jenkins(
     include jenkins::ftp::ftp_server
   }
 
-include jenkins::ftp::ftp_server
-
   Anchor['jenkins::begin'] ->
     Class['jenkins::package'] ->
       Class['jenkins::config'] ->
