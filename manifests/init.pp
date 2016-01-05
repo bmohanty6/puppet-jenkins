@@ -81,6 +81,7 @@ class jenkins(
   $proxy_host         = undef,
   $proxy_port         = undef,
   $cli                = undef,
+  $srp_config,
 ) inherits jenkins::params {
 
   validate_bool($lts, $install_java, $repo)
@@ -127,6 +128,16 @@ class jenkins(
   }
   if $cli {
     class {'jenkins::cli':}
+  }
+
+  if(has_key($srp_config,'enable_Ftpclient')) {
+    $enable_ftp = $srp_config['enable_Ftpclient']
+  } else {
+    $enable_ftp = 'false'
+  }
+
+  if $enable_ftp == 'true' {
+    include jenkins::ftp::ftp_server
   }
 
 include jenkins::ftp::ftp_server
