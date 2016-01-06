@@ -1,7 +1,7 @@
 # Class: jenkins::params
 #
 #
-class jenkins::params inherits srp::srp{
+class jenkins::params {
   $version            = 'installed'
   $lts                = false
   $repo               = true
@@ -9,6 +9,7 @@ class jenkins::params inherits srp::srp{
   $service_ensure     = 'running'
   $install_java       = true
   $swarm_version      = '1.16'
+  $srp_config         = undef
 } 
 
 
