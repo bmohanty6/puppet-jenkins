@@ -81,10 +81,7 @@ class jenkins(
   $proxy_host         = undef,
   $proxy_port         = undef,
   $cli                = undef,
-  $srp_config         = $jenkins::params::srp_config
-  $cluster            = $jenkins::params::cluster
-  $facet              = $jenkins::params::facet
-  $facet_index        = $jenkins::params::facet_index
+  $srp_config         = undef
 ) inherits jenkins::params {
 
   validate_bool($lts, $install_java, $repo)
