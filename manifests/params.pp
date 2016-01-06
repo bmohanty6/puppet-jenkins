@@ -1,7 +1,7 @@
 # Class: jenkins::params
 #
 #
-class jenkins::params {
+class jenkins::params ($srp_config = undef) {
   $version            = 'installed'
   $lts                = false
   $repo               = true
@@ -9,7 +9,6 @@ class jenkins::params {
   $service_ensure     = 'running'
   $install_java       = true
   $swarm_version      = '1.16'
-  $srp_config         = undef
 } 
 
 
