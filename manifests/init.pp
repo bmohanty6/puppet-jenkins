@@ -74,7 +74,7 @@ class jenkins(
   $repo               = $jenkins::params::repo,
   $service_enable     = $jenkins::params::service_enable,
   $service_ensure     = $jenkins::params::service_ensure,
-  $srp_config         = $jenkins::params::srp_config
+  $srp_config         = $jenkins::params::srp_config,
   $config_hash        = {},
   $plugin_hash        = {},
   $configure_firewall = undef,
